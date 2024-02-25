@@ -1,0 +1,44 @@
+$xs: 400px;
+$sm: 700px;
+$md: 800px;
+$lg: 1280px;
+$xl: 1440px;
+$xxl: 1980px;
+
+@mixin devices($breakpoint) {
+  @if $breakpoint == xs {
+    @media only screen and (max-width: $xs) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm {
+    @media only screen and (max-width: $sm) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media only screen and (max-width: $md) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media only screen and (max-width: $lg) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media only screen and (max-width: $xl) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxl {
+    @media only screen and (max-width: $xxl) {
+      @content;
+    }
+  }
+}

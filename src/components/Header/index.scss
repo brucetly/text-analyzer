@@ -1,0 +1,35 @@
+@use '../../styles/theme.scss' as *;
+@use '../../styles/breakpoints.scss' as breakpoints;
+
+.header {
+  padding: 0 15px;
+  background-color: $tertiary-background;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .app-title {
+    color: $primary-text;
+    font-size: 18px;
+    font-weight: 600;
+    @include breakpoints.devices(sm) {
+      font-size: 16px;
+    }
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    li {
+      color: $primary-text;
+      margin-left: 20px;
+      font-size: 14px;
+      font-weight: 400;
+      list-style-type: none;
+      @include breakpoints.devices(sm) {
+        font-size: 13px;
+        margin-left: 14px;
+      }
+    }
+  }
+}
